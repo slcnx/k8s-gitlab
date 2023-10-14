@@ -47,7 +47,7 @@ spec:
     spec:
       containers:
       - name: postgresql
-        image: sameersbn/postgresql:12-20200524
+        image: registry.cn-hangzhou.aliyuncs.com/registry_mirrors/postgresql:12-20200524
         env:
         - name: DB_USER
           valueFrom:
