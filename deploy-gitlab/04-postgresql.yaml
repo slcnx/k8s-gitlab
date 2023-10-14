@@ -1,3 +1,18 @@
+
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: postgresql-data
+  namespace: gitlab
+  labels:
+    app: postgresql
+spec:
+  accessModes:
+  - ReadWriteOnce
+  storageClassName: nfs-csi
+  resources:
+    requests:
+      storage: 10Gi
 ---
 apiVersion: v1
 kind: Service
@@ -75,5 +90,8 @@ spec:
           initialDelaySeconds: 5
           timeoutSeconds: 1
       volumes:
-      - name: data
-        emptyDir: {}
+#      - name: data
+#        emptyDir: {}
+      - persistentVolumeClaim:
+          claimName: postgresql-data
+        name: data
