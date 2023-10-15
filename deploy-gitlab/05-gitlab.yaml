@@ -105,6 +105,7 @@ spec:
           value: mage@magedu.com
 
         - name: GITLAB_HOST
+          #value: gitlab.gitlab.svc.cluster.local
           value: gitlab.gitlab.svc.cluster.local
         - name: GITLAB_PORT
           value: "80"

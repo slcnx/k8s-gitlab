@@ -44,5 +44,5 @@ spec:
     - destination:
         host: gitlab
         port:
-          number: 31080
+          number: 80
 ---
