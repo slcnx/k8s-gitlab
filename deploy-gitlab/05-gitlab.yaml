@@ -70,7 +70,7 @@ spec:
     spec:
       containers:
       - name: gitlab
-        image: sameersbn/gitlab:15.6.0
+        image: registry.cn-hangzhou.aliyuncs.com/registry_mirrors/gitlab:15.6.0
         env:
         - name: TZ
           value: Asia/Shanghai
